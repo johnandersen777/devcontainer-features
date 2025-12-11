@@ -5,7 +5,7 @@ SHALLOW_CLONE=${SHALLOWCLONE:-"false"}
 USERNAME=${USERNAME:-"automatic"}
 
 ARCHITECTURE="$(uname -m)"
-if [ "${ARCHITECTURE}" != "amd64" ] && [ "${ARCHITECTURE}" != "x86_64" ]; then
+if [ "${ARCHITECTURE}" != "amd64" ] && [ "${ARCHITECTURE}" != "x86_64" ] && [ "${ARCHITECTURE}" != "aarch64" ]; then
   echo "(!) Architecture $ARCHITECTURE unsupported"
   exit 1
 fi
